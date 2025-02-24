@@ -23,7 +23,7 @@ public class PresentationV2 {
             Class cMetier = Class.forName(metierClassName);
             IMetier metier = (IMetier) cMetier.getConstructor(IDao.class).newInstance(o);
             System.out.println("Result: "+metier.calcul());
-            //instanciation dynamique via stter
+            //instanciation dynamique via setter
 //            String metierClassName = scanner.nextLine();
 //            Class cMetier = Class.forName(metierClassName);
 //            IMetier metier = (IMetier) cMetier.getConstructor().newInstance();
