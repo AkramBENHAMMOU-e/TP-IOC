@@ -117,6 +117,7 @@ public class PresentationV1 {
 
 #### b. Par instanciation dynamique (PresenatationV2.java)
 
+création d'un fichier `config.txt` contenant les noms des classes à instancier: 
 ```java
 public class PresentationV2 {
     public static void main(String[] args)  {
