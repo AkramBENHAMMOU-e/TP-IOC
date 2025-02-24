@@ -6,6 +6,7 @@ import metier.IMetier;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Scanner;
 
 public class PresentationV2 {
@@ -22,6 +23,15 @@ public class PresentationV2 {
             Class cMetier = Class.forName(metierClassName);
             IMetier metier = (IMetier) cMetier.getConstructor(IDao.class).newInstance(o);
             System.out.println("Result: "+metier.calcul());
+            //instanciation dynamique via stter
+//            String metierClassName = scanner.nextLine();
+//            Class cMetier = Class.forName(metierClassName);
+//            IMetier metier = (IMetier) cMetier.getConstructor().newInstance();
+//            //metier.setDao(d);
+//            Method m = cMetier.getDeclaredMethod("setDao", IDao.class);
+//            m.invoke(metier, o);
+//            System.out.println("Result: "+metier.calcul());
+
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
